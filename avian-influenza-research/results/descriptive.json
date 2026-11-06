@@ -1,0 +1,85 @@
+{
+  "annual_poultry_events": {
+    "2022": 394,
+    "2023": 211,
+    "2024": 202,
+    "2025": 401,
+    "2026": 218
+  },
+  "annual_all_events": {
+    "2022": 718,
+    "2023": 342,
+    "2024": 316,
+    "2025": 610,
+    "2026": 314
+  },
+  "annual_poultry_birds": {
+    "2022": 57798941,
+    "2023": 21846360,
+    "2024": 50648016,
+    "2025": 54726122,
+    "2026": 26599010
+  },
+  "top10_events_bird_share": 0.18000746239284648,
+  "top1pct_events_bird_share": 0.23940445759528273,
+  "top5_states_by_events": [
+    {
+      "state": "Minnesota",
+      "events": 187,
+      "birds": 10974130
+    },
+    {
+      "state": "Indiana",
+      "events": 184,
+      "birds": 10578470
+    },
+    {
+      "state": "South Dakota",
+      "events": 159,
+      "birds": 8330610
+    },
+    {
+      "state": "California",
+      "events": 120,
+      "birds": 25498150
+    },
+    {
+      "state": "Pennsylvania",
+      "events": 114,
+      "birds": 15951220
+    }
+  ],
+  "top5_states_by_birds": [
+    {
+      "state": "Iowa",
+      "events": 55,
+      "birds": 30792400
+    },
+    {
+      "state": "California",
+      "events": 120,
+      "birds": 25498150
+    },
+    {
+      "state": "Ohio",
+      "events": 81,
+      "birds": 25361760
+    },
+    {
+      "state": "Pennsylvania",
+      "events": 114,
+      "birds": 15951220
+    },
+    {
+      "state": "Wisconsin",
+      "events": 31,
+      "birds": 11764646
+    }
+  ],
+  "median_birds_by_group": {
+    "Backyard poultry proxy": 1000.0,
+    "Commercial": 36200.0,
+    "Market / sales": 390.0,
+    "WOAH Non-Poultry": 40.0
+  }
+}

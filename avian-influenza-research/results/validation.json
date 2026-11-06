@@ -1,0 +1,46 @@
+{
+  "poultry_rows": 2300,
+  "wild_rows": 20539,
+  "poultry_date_min": "2022-02-08",
+  "poultry_date_max": "2026-11-04",
+  "wild_date_min": "2022-01-12",
+  "wild_date_max": "2026-10-27",
+  "poultry_exact_signatures_repeated": 10,
+  "poultry_repeated_event_labels": 0,
+  "poultry_repeated_premises_labels_across_dates": 0,
+  "wild_exact_signatures_repeated": 7447,
+  "wild_missing_collection_dates": 278,
+  "wild_negative_delay": 10,
+  "wild_delay_quantiles_days": {
+    "0.5": 15.0,
+    "0.9": 151.0,
+    "0.95": 257.0,
+    "0.99": 308.40000000000146
+  },
+  "wild_delay_over_30_days": 5230,
+  "wild_missing_by_column": {
+    "State": 0,
+    "County": 0,
+    "Collection Date": 0,
+    "Date Detected": 0,
+    "HPAI Strain": 0,
+    "Bird Species": 0,
+    "WOAH Classification": 0,
+    "Sampling Method": 0,
+    "Submitting Agency": 0
+  },
+  "wild_invalid_collection_tokens": {
+    "Unknown": 277,
+    "2/19/215": 1
+  },
+  "groups": {
+    "Commercial": 1060,
+    "WOAH Non-Poultry": 874,
+    "Backyard poultry proxy": 286,
+    "Market / sales": 80
+  },
+  "birds_total": 211675446,
+  "birds_poultry": 211618449,
+  "states_all": 51,
+  "states_poultry": 47
+}

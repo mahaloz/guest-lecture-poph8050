@@ -1,0 +1,27 @@
+Acquisition observations, 6 November 2026 UTC
+
+Official poultry landing page:
+https://www.aphis.usda.gov/livestock-poultry-disease/avian/avian-influenza/hpai-detections/commercial-backyard-flocks
+Its embedded Tableau dashboard was the source of the final event data.
+The plain HPAI2022ConfirmedDetections.csv endpoint returned HTTP 200 but only
+four monthly backyard-count rows, so it was unsuitable for this investigation.
+Guessed direct detail-worksheet URLs returned HTTP 404. TableauScraper failed
+to initialize against the portal HTML. These failures did not establish that
+the underlying official data were unavailable.
+
+The detailed crosstab export succeeded through the public browser interface.
+Worksheet: X - Table by Confirmation Date. 2,300 event rows.
+The first export used the inspected public helper from
+https://github.com/casey891/hpai-dashboard/blob/main/tableau_export.py .
+The delivered independent downloader scripts/download_poultry.py was then
+executed successfully against APHIS; the final manifest records that retrieval.
+No third-party poultry observations are used in the final analysis.
+
+The wild-bird landing page specifies a direct CSV using data-csv-url:
+https://www.aphis.usda.gov/sites/default/files/hpai-wild-birds.csv
+That official CSV was successfully acquired, with 20,539 rows.
+APHIS warns of historical sample processing and confirmation-date delays.
+
+No test-negative counts, monthly susceptible-flock populations, weather series,
+physical-premises identifiers, or genotypes were acquired. NASS and NOAA were
+investigated as potential follow-up sources, not included as analyzed data.

@@ -1,0 +1,256 @@
+{
+  "validation": {
+    "poultry_rows": 2300,
+    "wild_rows": 20539,
+    "poultry_date_min": "2022-02-08",
+    "poultry_date_max": "2026-11-04",
+    "wild_date_min": "2022-01-12",
+    "wild_date_max": "2026-10-27",
+    "poultry_exact_signatures_repeated": 10,
+    "poultry_repeated_event_labels": 0,
+    "poultry_repeated_premises_labels_across_dates": 0,
+    "wild_exact_signatures_repeated": 7447,
+    "wild_missing_collection_dates": 278,
+    "wild_negative_delay": 10,
+    "wild_delay_quantiles_days": {
+      "0.5": 15.0,
+      "0.9": 151.0,
+      "0.95": 257.0,
+      "0.99": 308.40000000000146
+    },
+    "wild_delay_over_30_days": 5230,
+    "wild_missing_by_column": {
+      "State": 0,
+      "County": 0,
+      "Collection Date": 0,
+      "Date Detected": 0,
+      "HPAI Strain": 0,
+      "Bird Species": 0,
+      "WOAH Classification": 0,
+      "Sampling Method": 0,
+      "Submitting Agency": 0
+    },
+    "wild_invalid_collection_tokens": {
+      "Unknown": 277,
+      "2/19/215": 1
+    },
+    "groups": {
+      "Commercial": 1060,
+      "WOAH Non-Poultry": 874,
+      "Backyard poultry proxy": 286,
+      "Market / sales": 80
+    },
+    "birds_total": 211675446,
+    "birds_poultry": 211618449,
+    "states_all": 51,
+    "states_poultry": 47
+  },
+  "hypotheses": {
+    "H1": [
+      {
+        "season": "Spring",
+        "ratio": 6.741935483870967,
+        "ci_low": 3.5802615446650345,
+        "ci_high": 12.695635081858535,
+        "p_two_sided": 3.425836401485081e-09
+      },
+      {
+        "season": "Autumn",
+        "ratio": 7.4570929748971855,
+        "ci_low": 4.090478346347076,
+        "ci_high": 13.594555679758292,
+        "p_two_sided": 5.461879610996157e-11
+      },
+      {
+        "season": "Winter",
+        "ratio": 11.486391239340618,
+        "ci_low": 5.613911994608248,
+        "ci_high": 23.50182614724223,
+        "p_two_sided": 2.336125950558456e-11
+      }
+    ],
+    "H1_dispersion": 15.564363695212842,
+    "H1_negative_binomial": [
+      {
+        "season": "Spring",
+        "ratio": 5.933921097971867,
+        "ci_low": 3.2170535203689403,
+        "ci_high": 10.94523898157514,
+        "p_two_sided": 1.1924301738923765e-08
+      },
+      {
+        "season": "Autumn",
+        "ratio": 8.245459577844649,
+        "ci_low": 3.938258594082333,
+        "ci_high": 17.263367050611894,
+        "p_two_sided": 2.1949082371287757e-08
+      },
+      {
+        "season": "Winter",
+        "ratio": 12.420350378096712,
+        "ci_low": 5.522685182034104,
+        "ci_high": 27.932988832412228,
+        "p_two_sided": 1.1107700365217837e-09
+      }
+    ],
+    "H1_nb_alpha": 0.5492974910607371,
+    "H1_full_years": [
+      {
+        "season": "Spring",
+        "ratio": 4.307692307692296,
+        "ci_low": 1.55166306258311,
+        "ci_high": 11.958919088310429,
+        "p_two_sided": 0.005058122205513906
+      },
+      {
+        "season": "Autumn",
+        "ratio": 10.887573964497008,
+        "ci_low": 3.4351625582028817,
+        "ci_high": 34.507614945130086,
+        "p_two_sided": 4.9752278582061154e-05
+      },
+      {
+        "season": "Winter",
+        "ratio": 15.526592292873904,
+        "ci_low": 4.7136267087184125,
+        "ci_high": 51.14428509649149,
+        "p_two_sided": 6.5071424908421495e-06
+      }
+    ],
+    "H1_including_nonpoultry": [
+      {
+        "season": "Spring",
+        "ratio": 5.565217391304341,
+        "ci_low": 3.2528141724611284,
+        "ci_high": 9.52149215122322,
+        "p_two_sided": 3.7278808883128e-10
+      },
+      {
+        "season": "Autumn",
+        "ratio": 6.539085554698212,
+        "ci_low": 3.7004093176250397,
+        "ci_high": 11.555381100139048,
+        "p_two_sided": 1.017588630573737e-10
+      },
+      {
+        "season": "Winter",
+        "ratio": 10.342928248432017,
+        "ci_low": 5.283041324545066,
+        "ci_high": 20.248973684002923,
+        "p_two_sided": 9.345750919857144e-12
+      }
+    ],
+    "H2": {
+      "chi2": 5.568868015763432,
+      "cramers_v": 0.06453833528098057,
+      "permutation_p": 0.1648,
+      "n": 1337,
+      "minimum_expected": 10.909498878085266,
+      "cells_expected_under_5": 0,
+      "permutations": 4999
+    },
+    "H2_full_years": {
+      "chi2": 27.13831537509778,
+      "cramers_v": 0.18946567646846524,
+      "permutation_p": 0.0002,
+      "n": 756,
+      "minimum_expected": 3.642857142857143,
+      "cells_expected_under_5": 1,
+      "permutations": 4999
+    },
+    "H2_including_nonpoultry": {
+      "chi2": 7.550077525004026,
+      "cramers_v": 0.05855541296393478,
+      "permutation_p": 0.2234,
+      "n": 2202,
+      "minimum_expected": 49.63851044504995,
+      "cells_expected_under_5": 0,
+      "permutations": 4999
+    },
+    "H3": {
+      "chi2": 933.6248573152835,
+      "cramers_v": 0.40585535656293403,
+      "permutation_p": 0.0002,
+      "n": 1417,
+      "minimum_expected": 0.14255469301340862,
+      "cells_expected_under_5": 166,
+      "permutations": 4999
+    },
+    "H3_full_years": {
+      "chi2": 446.91239447671376,
+      "cramers_v": 0.5239429480616513,
+      "permutation_p": 0.0002,
+      "n": 814,
+      "minimum_expected": 0.24815724815724816,
+      "cells_expected_under_5": 91,
+      "permutations": 4999
+    },
+    "H4_exploratory": {
+      "beta": -0.11813234171325972,
+      "ci_low": -0.33736023205144233,
+      "ci_high": 0.10109554862492291,
+      "p": 0.2909046933329015,
+      "n_months": 55,
+      "first_difference": {
+        "beta": 0.07878276491253479,
+        "ci_low": -0.1508217387347633,
+        "ci_high": 0.3083872685598329,
+        "p": 0.5012589178712934,
+        "n_months": 54
+      },
+      "collection_date_sensitivity": {
+        "beta": 0.28088431748023557,
+        "ci_low": -0.04839487746779053,
+        "ci_high": 0.6101635124282616,
+        "p": 0.09454328809228972,
+        "n_months": 55
+      }
+    },
+    "lag_correlations": [
+      {
+        "lag_months": -3,
+        "raw_r": -0.005071199188030602,
+        "adjusted_r": -0.01462796050679198
+      },
+      {
+        "lag_months": -2,
+        "raw_r": 0.3080922479841833,
+        "adjusted_r": 0.09033261893848368
+      },
+      {
+        "lag_months": -1,
+        "raw_r": 0.5187091958454156,
+        "adjusted_r": 0.10698171283325095
+      },
+      {
+        "lag_months": 0,
+        "raw_r": 0.5491220788349814,
+        "adjusted_r": 0.02392088312754434
+      },
+      {
+        "lag_months": 1,
+        "raw_r": 0.4863394201453143,
+        "adjusted_r": -0.07244352247539028
+      },
+      {
+        "lag_months": 2,
+        "raw_r": 0.3684122009371412,
+        "adjusted_r": -0.0023795646833196047
+      },
+      {
+        "lag_months": 3,
+        "raw_r": 0.1604941047006015,
+        "adjusted_r": -0.09229175330578329
+      }
+    ],
+    "holm_p": {
+      "H1_spring": 1.0277509204455243e-08,
+      "H1_autumn": 2.1847518443984628e-10,
+      "H2": 0.1648,
+      "H3": 0.0004
+    },
+    "inferential_months": 56,
+    "inferential_start": "2022-03-01",
+    "inferential_end": "2026-10-01"
+  }
+}

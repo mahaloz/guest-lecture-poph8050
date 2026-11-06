@@ -1,0 +1,13 @@
+{
+  "executed_at": "2026-11-06T07:00:03.111366+00:00",
+  "python": "3.9.6",
+  "numpy": "1.26.4",
+  "pandas": "2.3.3",
+  "input_manifest_sha256": "782888c8e7aae1a004192091db8414401e7b480221972cf2326a9e08b382eb45",
+  "seed": 8050,
+  "analysis_cutoff_exclusive": "2026-11-01",
+  "status": "success",
+  "figures_png": 8,
+  "poultry_rows": 2300,
+  "wild_rows": 20539
+}

@@ -1,0 +1,56 @@
+[
+  {
+    "id": "r1",
+    "title": "USDA APHIS. Confirmations of Highly Pathogenic Avian Influenza in Commercial and Backyard Flocks. Live dashboard and detailed crosstab, accessed 6 November 2026.",
+    "url": "https://www.aphis.usda.gov/livestock-poultry-disease/avian/avian-influenza/hpai-detections/commercial-backyard-flocks",
+    "consulted": "2026-11-06"
+  },
+  {
+    "id": "r2",
+    "title": "USDA APHIS. Detections of Highly Pathogenic Avian Influenza in Wild Birds. Official CSV and surveillance notes, accessed 6 November 2026.",
+    "url": "https://www.aphis.usda.gov/livestock-poultry-disease/avian/avian-influenza/hpai-detections/wild-birds",
+    "consulted": "2026-11-06"
+  },
+  {
+    "id": "r3",
+    "title": "Damodaran L, Jaeger AS, Moncla LH. Ecology and spread of the North American H5N1 epizootic. Nature 649, 432\u2013441 (2026); online 12 November 2025. doi:10.1038/s41586-025-09737-x.",
+    "url": "https://www.nature.com/articles/s41586-025-09737-x",
+    "consulted": "2026-11-06"
+  },
+  {
+    "id": "r4",
+    "title": "Ssematimba A et al. Estimating the time of Highly Pathogenic Avian Influenza virus introduction into United States poultry flocks during the 2022/24 epizootic. PLoS ONE 19(12):e0310733 (2024). doi:10.1371/journal.pone.0310733.",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11642945/",
+    "consulted": "2026-11-06"
+  },
+  {
+    "id": "r5",
+    "title": "Harrington WN et al. Rapid expansion of genotype D1.1 A(H5N1) influenza viruses in wild birds across North America during the 2024 migratory season. Nature Medicine 32, 1661\u20131665 (2026). doi:10.1038/s41591-026-04300-1.",
+    "url": "https://www.nature.com/articles/s41591-026-04300-1",
+    "consulted": "2026-11-06"
+  },
+  {
+    "id": "r6",
+    "title": "Center for Epidemiology and Animal Health (2026). Status and Epidemiologic Analyses of HPAI-affected Poultry Flocks: September 30, 2025 Interim Report. USDA APHIS.",
+    "url": "https://www.aphis.usda.gov/sites/default/files/hpai-epi-report-fy25-q4.pdf",
+    "consulted": "2026-11-06"
+  },
+  {
+    "id": "r7",
+    "title": "U.S. Census Bureau. 2024 cartographic boundary shapefiles, U.S. states, 1:20 million.",
+    "url": "https://www2.census.gov/geo/tiger/GENZ2024/shp/cb_2024_us_state_20m.zip",
+    "consulted": "2026-11-06"
+  },
+  {
+    "id": "r8",
+    "title": "USDA NASS. Quick Stats and 2022 Census of Agriculture. Public inventory and operation-count data; investigated as follow-up denominators.",
+    "url": "https://www.nass.usda.gov/Quick_Stats/",
+    "consulted": "2026-11-06"
+  },
+  {
+    "id": "r9",
+    "title": "NOAA NCEI. Climate Data Online. Public daily/monthly weather data; investigated as a follow-up explanatory source.",
+    "url": "https://www.ncei.noaa.gov/cdo-web/",
+    "consulted": "2026-11-06"
+  }
+]

@@ -1,0 +1,8 @@
+{
+  "url": "https://publicdashboards.dl.usda.gov/t/MRP_PUB/views/VS_Avian_HPAIConfirmedDetections2022/HPAI2022ConfirmedDetections?:embed=y&:isGuestRedirectFromVizportal=y&:refresh=yes",
+  "worksheet": "X - Table by Confirmation Date",
+  "path": "data/raw/A Table by Confirmation Date.csv",
+  "retrieved_at": "2026-11-06T06:59:24.693223+00:00",
+  "sha256": "5a6ffbc475ba5c2bd51ecbed48e9ad4985d681e4a105af84d7e3006741df8c05",
+  "bytes": 3511384
+}

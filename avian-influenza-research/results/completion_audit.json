@@ -1,0 +1,79 @@
+{
+  "audited_at": "2026-11-06T07:00:31.282441+00:00",
+  "status": "passed",
+  "checks": [
+    {
+      "requirement": "Source URLs, retrieval dates and snapshot SHA256 hashes",
+      "status": "verified"
+    },
+    {
+      "requirement": "No poultry rows lost and one affected-bird cell per source event",
+      "status": "verified"
+    },
+    {
+      "requirement": "Affected-bird accounting agrees independently with raw export",
+      "status": "verified"
+    },
+    {
+      "requirement": "Source confirmation dates retained instead of release dates",
+      "status": "verified"
+    },
+    {
+      "requirement": "WOAH Non-Poultry separated from primary poultry outcome",
+      "status": "verified"
+    },
+    {
+      "requirement": "Complete-month primary counts reconcile to event records",
+      "status": "verified"
+    },
+    {
+      "requirement": "Annual descriptive event/bird totals reconcile",
+      "status": "verified"
+    },
+    {
+      "requirement": "Four hypotheses and sensitivities have executed results",
+      "status": "verified"
+    },
+    {
+      "requirement": "H2 table matches inferential sample size",
+      "status": "verified"
+    },
+    {
+      "requirement": "H3 table matches inferential sample size",
+      "status": "verified"
+    },
+    {
+      "requirement": "At least five high-resolution figures plus geographic visualization",
+      "status": "verified"
+    },
+    {
+      "requirement": "Notebook code executed with no error outputs",
+      "status": "verified"
+    },
+    {
+      "requirement": "Notebook contains all eight embedded figures",
+      "status": "verified"
+    },
+    {
+      "requirement": "Report relative figure, source, code and notebook links resolve",
+      "status": "verified"
+    },
+    {
+      "requirement": "Report reference anchors resolve",
+      "status": "verified"
+    },
+    {
+      "requirement": "Scientific report includes required sections and follow-up questions",
+      "status": "verified"
+    },
+    {
+      "requirement": "Reproduction instructions and dependency files present",
+      "status": "verified"
+    },
+    {
+      "requirement": "Hypothesis plan saved before processed analysis outputs",
+      "status": "verified"
+    }
+  ],
+  "evidence_note": "These checks verify artifacts and internal accounting, not surveillance completeness or causal validity. Visual review was also performed on all eight figures and the rendered report."
+}

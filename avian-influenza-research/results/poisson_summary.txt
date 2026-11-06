@@ -1,0 +1,23 @@
+                 Generalized Linear Model Regression Results                  
+==============================================================================
+Dep. Variable:                poultry   No. Observations:                   56
+Model:                            GLM   Df Residuals:                       48
+Model Family:                 Poisson   Df Model:                            7
+Link Function:                    Log   Scale:                          1.0000
+Method:                          IRLS   Log-Likelihood:                -462.95
+Date:                Fri, 06 Nov 2026   Deviance:                       683.63
+Time:                        02:00:05   Pearson chi2:                     747.
+No. Iterations:                     6   Pseudo R-squ. (CS):              1.000
+Covariance Type:                  HAC                                         
+======================================================================================================================
+                                                         coef    std err          z      P>|z|      [0.025      0.975]
+----------------------------------------------------------------------------------------------------------------------
+Intercept                                             -1.5098      0.303     -4.986      0.000      -2.103      -0.916
+C(season, Treatment(reference="Summer"))[T.Autumn]     2.0092      0.306      6.558      0.000       1.409       2.610
+C(season, Treatment(reference="Summer"))[T.Winter]     2.4412      0.365      6.683      0.000       1.725       3.157
+C(season, Treatment(reference="Summer"))[T.Spring]     1.9083      0.323      5.910      0.000       1.275       2.541
+C(year)[T.2023]                                       -0.9318      0.429     -2.171      0.030      -1.773      -0.091
+C(year)[T.2024]                                       -0.9801      0.442     -2.215      0.027      -1.847      -0.113
+C(year)[T.2025]                                       -0.2897      0.324     -0.895      0.371      -0.924       0.344
+C(year)[T.2026]                                       -0.6305      0.332     -1.897      0.058      -1.282       0.021
+======================================================================================================================

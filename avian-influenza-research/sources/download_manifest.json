@@ -1,0 +1,30 @@
+[
+  {
+    "url": "https://www.aphis.usda.gov/sites/default/files/hpai-wild-birds.csv",
+    "path": "data/raw/wild_birds.csv",
+    "retrieved_at": "2026-11-06T06:51:21.365164+00:00",
+    "sha256": "008c86d461663f22e0d0f717f597f7a96013f42e277cc313654ff914c8e42e6a",
+    "bytes": 2046840
+  },
+  {
+    "url": "https://www2.census.gov/geo/tiger/GENZ2024/shp/cb_2024_us_state_20m.zip",
+    "path": "data/raw/states.zip",
+    "retrieved_at": "2026-11-06T06:51:21.783085+00:00",
+    "sha256": "7bc773d83c01b6df69b8aada9c2b5983d97f22f4551947cc5c00b87c663223ef",
+    "bytes": 187671
+  },
+  {
+    "url": "https://www.aphis.usda.gov/livestock-poultry-disease/avian/avian-influenza/hpai-detections/commercial-backyard-flocks",
+    "path": "sources/aphis_poultry.html",
+    "retrieved_at": "2026-11-06T06:51:24.988484+00:00",
+    "sha256": "b7bad6de89e2d1acac2a0b3747e95c15d4fc8ee53fa7ae4c9eaf2df30bddd00d",
+    "bytes": 72273
+  },
+  {
+    "url": "https://www.aphis.usda.gov/livestock-poultry-disease/avian/avian-influenza/hpai-detections/wild-birds",
+    "path": "sources/aphis_wild.html",
+    "retrieved_at": "2026-11-06T06:51:27.145632+00:00",
+    "sha256": "1262c2292934a633c4ba623affc12226fb96dae0c1f3c2b7ae5251b0f8d45739",
+    "bytes": 83588
+  }
+]
