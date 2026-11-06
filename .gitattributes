@@ -1,4 +1,5 @@
 # Preserve deposited source files byte-for-byte.
+outbreak-explorer/data/*.csv -text -whitespace
 reproduction/data/experiment2/** -text -whitespace
 research-walkthrough/dist/assets/*.csv -text -whitespace
 research-walkthrough/dist/assets/*.R -text -whitespace
