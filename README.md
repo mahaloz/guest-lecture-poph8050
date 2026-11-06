@@ -9,7 +9,7 @@ All three demos are already built. **Opening a demo shows saved work; it does no
 ## Start here with Codex
 
 1. Get a copy of this project: on [the GitHub project page](https://github.com/mahaloz/POPH8050_lecture), choose **Code → Download ZIP**, then unzip it. If you already have a copy, use that folder.
-2. Give Codex access to the `POPH8050_lecture` folder. This is the folder containing this README and the three `demo` launch files.
+2. Give Codex access to the `guest-lecture-poph8050` folder. This is the folder containing this README and the three `demo` launch files.
 3. Paste this request, replacing `1` with whichever demo you want:
 
    > Please run demo 1 in this project. Read README.md and that demo's own instructions first. Check which software my computer needs, help me install anything missing, start the demo, and give me its browser address. Explain each step in everyday language. Use the saved data and results; do not refresh data or rerun the analysis. Then walk me through the suggested activities and explain the takeaways and limitations.
