@@ -1,0 +1,151 @@
+{
+  "_links": {
+    "self": {
+      "href": "/api/v2/versions/11496/files"
+    },
+    "first": {
+      "href": "/api/v2/versions/11496/files"
+    },
+    "last": {
+      "href": "/api/v2/versions/11496/files?page=1"
+    }
+  },
+  "count": 4,
+  "total": 4,
+  "_embedded": {
+    "stash:files": [
+      {
+        "_links": {
+          "self": {
+            "href": "/api/v2/files/46841"
+          },
+          "stash:dataset": {
+            "href": "/api/v2/datasets/doi%3A10.5061%2Fdryad.4tn48"
+          },
+          "stash:version": {
+            "href": "/api/v2/versions/11496"
+          },
+          "stash:files": {
+            "href": "/api/v2/versions/11496/files"
+          },
+          "stash:download": {
+            "href": "/api/v2/files/46841/download"
+          },
+          "curies": [
+            {
+              "name": "stash",
+              "href": "https://github.com/datadryad/dryad-app/blob/main/documentation/apis/link_relations.md#{rel}",
+              "templated": "true"
+            }
+          ]
+        },
+        "path": "Fig1_and_S1.zip",
+        "size": 34646,
+        "mimeType": "application/zip",
+        "status": "created",
+        "digest": "ddaafa3310a71db0c33a43d0e2df9648",
+        "digestType": "md5",
+        "description": "Data_and_R_code_for_Fig1_and_S1"
+      },
+      {
+        "_links": {
+          "self": {
+            "href": "/api/v2/files/46842"
+          },
+          "stash:dataset": {
+            "href": "/api/v2/datasets/doi%3A10.5061%2Fdryad.4tn48"
+          },
+          "stash:version": {
+            "href": "/api/v2/versions/11496"
+          },
+          "stash:files": {
+            "href": "/api/v2/versions/11496/files"
+          },
+          "stash:download": {
+            "href": "/api/v2/files/46842/download"
+          },
+          "curies": [
+            {
+              "name": "stash",
+              "href": "https://github.com/datadryad/dryad-app/blob/main/documentation/apis/link_relations.md#{rel}",
+              "templated": "true"
+            }
+          ]
+        },
+        "path": "Fig2_and_S2.zip",
+        "size": 19907,
+        "mimeType": "application/zip",
+        "status": "created",
+        "digest": "78419ef9559d4c5ad71de6888905bf0b",
+        "digestType": "md5",
+        "description": "Data and R code for Fig2_and_S2"
+      },
+      {
+        "_links": {
+          "self": {
+            "href": "/api/v2/files/46843"
+          },
+          "stash:dataset": {
+            "href": "/api/v2/datasets/doi%3A10.5061%2Fdryad.4tn48"
+          },
+          "stash:version": {
+            "href": "/api/v2/versions/11496"
+          },
+          "stash:files": {
+            "href": "/api/v2/versions/11496/files"
+          },
+          "stash:download": {
+            "href": "/api/v2/files/46843/download"
+          },
+          "curies": [
+            {
+              "name": "stash",
+              "href": "https://github.com/datadryad/dryad-app/blob/main/documentation/apis/link_relations.md#{rel}",
+              "templated": "true"
+            }
+          ]
+        },
+        "path": "Fig3_and_S3.zip",
+        "size": 20912,
+        "mimeType": "application/zip",
+        "status": "created",
+        "digest": "9e777c2941429ad28000e33e37ef6c4c",
+        "digestType": "md5",
+        "description": "Data and R code for Fig3_and_S3"
+      },
+      {
+        "_links": {
+          "self": {
+            "href": "/api/v2/files/46844"
+          },
+          "stash:dataset": {
+            "href": "/api/v2/datasets/doi%3A10.5061%2Fdryad.4tn48"
+          },
+          "stash:version": {
+            "href": "/api/v2/versions/11496"
+          },
+          "stash:files": {
+            "href": "/api/v2/versions/11496/files"
+          },
+          "stash:download": {
+            "href": "/api/v2/files/46844/download"
+          },
+          "curies": [
+            {
+              "name": "stash",
+              "href": "https://github.com/datadryad/dryad-app/blob/main/documentation/apis/link_relations.md#{rel}",
+              "templated": "true"
+            }
+          ]
+        },
+        "path": "Fig4.zip",
+        "size": 8988,
+        "mimeType": "application/zip",
+        "status": "created",
+        "digest": "3c35cedd358c37ed11c94bd10f53d5b6",
+        "digestType": "md5",
+        "description": "Data and R code for Fig 4"
+      }
+    ]
+  }
+}

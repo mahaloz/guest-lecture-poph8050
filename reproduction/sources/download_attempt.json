@@ -1,0 +1,22 @@
+{
+  "attempted_utc": "2026-11-06T05:48:59.307235+00:00",
+  "doi": "10.5061/dryad.4tn48",
+  "file": "Fig2_and_S2.zip",
+  "expected_bytes": 19907,
+  "expected_md5": "78419ef9559d4c5ad71de6888905bf0b",
+  "requests": [
+    {
+      "url": "https://datadryad.org/downloads/file_stream/46842",
+      "status": 403,
+      "bytes": 118,
+      "content_type": "text/html"
+    },
+    {
+      "url": "https://datadryad.org/api/v2/files/46842/download",
+      "status": 401,
+      "bytes": 56,
+      "content_type": "application/json; charset=utf-8"
+    }
+  ],
+  "download_succeeded": false
+}

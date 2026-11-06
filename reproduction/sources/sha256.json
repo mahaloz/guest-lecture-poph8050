@@ -1,0 +1,11 @@
+{
+  "sources/published_figure2.png": "04691c08d0aff4803d01eebd998083165a446623816db147a7271c148d38faa5",
+  "sources/dryad_dataset.json": "cf4dbdd2185c7c40e3a8adf5b8522bb645dd3e6f31960365d393d341bd56a980",
+  "sources/dryad_files.json": "26912accc43aaa630e9aa1861048c38fd675b59b656bdef44c79b932123318bc",
+  "data/digitized_figure2.json": "49163701ded1203d3cef515964ec06055163ac79e28b596869b0155e13d1555b",
+  "data/Fig2_and_S2.zip": "15c1e3aee536dae9bc2af0ffec22f6b3d259d2b915c181e41892b55a2343f4ea",
+  "sources/browser_download.json": "e0fae11b567ecbc1d278f48a4c7cfcd21cf895db0ce8460d167f4f63beb54fca",
+  "outputs/data_curves.json": "6a3bfa65fc63a7cba6900e1128a3a2f0451a87fbfc67ebdc50286d1c78d3703c",
+  "outputs/data_summary.json": "c96056dfc56bff4aa881858e198bff9ce29c9886f0887e2af783541fa95cd0ec",
+  "data/experiment2/Fig2_and_S2/Figure2_ThreePanel.R": "fd0b0158e798cc5fbf96e6d7a5d5529b104f118030400dd85267bc7fda73ba0d"
+}

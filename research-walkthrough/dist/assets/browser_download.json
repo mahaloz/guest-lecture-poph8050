@@ -1,0 +1,13 @@
+{
+  "retrieved_utc": "2026-11-06T06:05:44.850238+00:00",
+  "method": "Firefox native UI: opened public Dryad dataset, clicked Fig2_and_S2.zip, browser validation completed automatically, Downloads showed Completed.",
+  "source_url": "https://datadryad.org/downloads/file_stream/46842",
+  "dataset_doi": "10.5061/dryad.4tn48",
+  "file": "Fig2_and_S2.zip",
+  "bytes": 19907,
+  "expected_md5": "78419ef9559d4c5ad71de6888905bf0b",
+  "verified_md5": "78419ef9559d4c5ad71de6888905bf0b",
+  "sha256": "15c1e3aee536dae9bc2af0ffec22f6b3d259d2b915c181e41892b55a2343f4ea",
+  "download_succeeded": true,
+  "note": "Previous direct HTTP failures are retained in download_attempt.json. No credentials were extracted and no CAPTCHA was solved."
+}

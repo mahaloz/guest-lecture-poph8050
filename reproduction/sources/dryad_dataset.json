@@ -1,0 +1,187 @@
+{
+  "_links": {
+    "self": {
+      "href": "/api/v2/datasets/doi%3A10.5061%2Fdryad.4tn48"
+    },
+    "stash:versions": {
+      "href": "/api/v2/datasets/doi%3A10.5061%2Fdryad.4tn48/versions"
+    },
+    "stash:version": {
+      "href": "/api/v2/versions/11496"
+    },
+    "stash:download": {
+      "href": "/api/v2/datasets/doi%3A10.5061%2Fdryad.4tn48/download"
+    },
+    "curies": [
+      {
+        "name": "stash",
+        "href": "https://github.com/datadryad/dryad-app/blob/main/documentation/apis/link_relations.md#{rel}",
+        "templated": "true"
+      }
+    ]
+  },
+  "identifier": "doi:10.5061/dryad.4tn48",
+  "id": 11453,
+  "storageSize": 84453,
+  "relatedPublicationISSN": "1544-9173",
+  "title": "Data from: Imperfect vaccination can enhance the transmission of highly virulent pathogens",
+  "authors": [
+    {
+      "firstName": "Andrew F.",
+      "lastName": "Read",
+      "affiliation": "National Institutes of Health",
+      "affiliationROR": "https://ror.org/01cwqze88",
+      "affiliations": [
+        {
+          "organization": "National Institutes of Health",
+          "identifier": "https://ror.org/01cwqze88"
+        },
+        {
+          "organization": "Pennsylvania State University",
+          "identifier": "https://ror.org/04p491231"
+        }
+      ]
+    },
+    {
+      "firstName": "Susan J.",
+      "lastName": "Baigent",
+      "affiliation": "The Pirbright Institute",
+      "affiliationROR": "https://ror.org/04xv01a59",
+      "affiliations": [
+        {
+          "organization": "The Pirbright Institute",
+          "identifier": "https://ror.org/04xv01a59"
+        }
+      ]
+    },
+    {
+      "firstName": "Claire",
+      "lastName": "Powers",
+      "affiliation": "The Pirbright Institute",
+      "affiliationROR": "https://ror.org/04xv01a59",
+      "affiliations": [
+        {
+          "organization": "The Pirbright Institute",
+          "identifier": "https://ror.org/04xv01a59"
+        }
+      ]
+    },
+    {
+      "firstName": "Lydia B.",
+      "lastName": "Kgosana",
+      "affiliation": "The Pirbright Institute",
+      "affiliationROR": "https://ror.org/04xv01a59",
+      "affiliations": [
+        {
+          "organization": "The Pirbright Institute",
+          "identifier": "https://ror.org/04xv01a59"
+        }
+      ]
+    },
+    {
+      "firstName": "Luke",
+      "lastName": "Blackwell",
+      "affiliation": "The Pirbright Institute",
+      "affiliationROR": "https://ror.org/04xv01a59",
+      "affiliations": [
+        {
+          "organization": "The Pirbright Institute",
+          "identifier": "https://ror.org/04xv01a59"
+        }
+      ]
+    },
+    {
+      "firstName": "Lorraine P.",
+      "lastName": "Smith",
+      "affiliation": "The Pirbright Institute",
+      "affiliationROR": "https://ror.org/04xv01a59",
+      "affiliations": [
+        {
+          "organization": "The Pirbright Institute",
+          "identifier": "https://ror.org/04xv01a59"
+        }
+      ]
+    },
+    {
+      "firstName": "David A.",
+      "lastName": "Kennedy",
+      "affiliation": "National Institutes of Health",
+      "affiliationROR": "https://ror.org/01cwqze88",
+      "affiliations": [
+        {
+          "organization": "National Institutes of Health",
+          "identifier": "https://ror.org/01cwqze88"
+        },
+        {
+          "organization": "Pennsylvania State University",
+          "identifier": "https://ror.org/04p491231"
+        }
+      ]
+    },
+    {
+      "firstName": "Stephen W.",
+      "lastName": "Walkden-Brown",
+      "affiliation": "University of New England",
+      "affiliationROR": "https://ror.org/02n2ava60",
+      "affiliations": [
+        {
+          "organization": "University of New England",
+          "identifier": "https://ror.org/02n2ava60"
+        }
+      ]
+    },
+    {
+      "firstName": "Venugopal K.",
+      "lastName": "Nair",
+      "affiliation": "The Pirbright Institute",
+      "affiliationROR": "https://ror.org/04xv01a59",
+      "affiliations": [
+        {
+          "organization": "The Pirbright Institute",
+          "identifier": "https://ror.org/04xv01a59"
+        }
+      ]
+    }
+  ],
+  "abstract": "Could some vaccines drive the evolution of more virulent pathogens? Conventional wisdom is that natural selection will remove highly lethal pathogens if host death greatly reduces transmission. Vaccines that keep hosts alive but still allow transmission could thus allow very virulent strains to circulate in a population. Here we show experimentally that immunization of chickens against Marek's disease virus enhances the fitness of more virulent strains, making it possible for hyperpathogenic strains to transmit. Immunity elicited by direct vaccination or by maternal vaccination prolongs host survival but does not prevent infection, viral replication or transmission, thus extending the infectious periods of strains otherwise too lethal to persist. Our data show that anti-disease vaccines that do not prevent transmission can create conditions that promote the emergence of pathogen strains that cause more severe disease in unvaccinated hosts.",
+  "keywords": [
+    "Poultry",
+    "chicken",
+    "Marek's disease virus",
+    "transmission",
+    "Virulence",
+    "Marek's disease",
+    "Holocene",
+    "hypoerpathogenic"
+  ],
+  "usageNotes": "<div class=\"o-metadata__file-usage-entry\"><h4 class=\"o-heading__level3-file-title\">Experiment 1</h4><div class=\"o-metadata__file-description\">Data_and_R_code_for_Fig1_and_S1</div><div class=\"o-metadata__file-name\">Fig1_and_S1.zip</br></div></div><div class=\"o-metadata__file-usage-entry\"><h4 class=\"o-heading__level3-file-title\">Experiment 2</h4><div class=\"o-metadata__file-description\">Data and R code for Fig2_and_S2</div><div class=\"o-metadata__file-name\">Fig2_and_S2.zip</br></div></div><div class=\"o-metadata__file-usage-entry\"><h4 class=\"o-heading__level3-file-title\">Experiment 3</h4><div class=\"o-metadata__file-description\">Data and R code for Fig3_and_S3</div><div class=\"o-metadata__file-name\">Fig3_and_S3.zip</br></div></div><div class=\"o-metadata__file-usage-entry\"><h4 class=\"o-heading__level3-file-title\">Experiment 4</h4><div class=\"o-metadata__file-description\">Data and R code for Fig 4</div><div class=\"o-metadata__file-name\">Fig4.zip</br></div></div>",
+  "locations": [
+    {
+      "place": "North America"
+    }
+  ],
+  "relatedWorks": [
+    {
+      "relationship": "primary_article",
+      "identifierType": "DOI",
+      "identifier": "https://doi.org/10.1371/journal.pbio.1002198"
+    }
+  ],
+  "versionNumber": 1,
+  "versionStatus": "submitted",
+  "curationStatus": "Published",
+  "versionChanges": "none",
+  "publicationDate": "2016-07-06",
+  "lastModificationDate": "2020-06-24",
+  "visibility": "public",
+  "sharingLink": "http://datadryad.org/dataset/doi:10.5061/dryad.4tn48",
+  "changedFields": [
+    "none"
+  ],
+  "license": "https://spdx.org/licenses/CC0-1.0.html",
+  "metrics": {
+    "views": 4150,
+    "downloads": 530,
+    "citations": 1
+  }
+}

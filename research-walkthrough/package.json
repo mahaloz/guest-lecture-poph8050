@@ -1,0 +1,1 @@
+{"name":"marek-research-walkthrough","version":"1.0.0","private":true,"type":"module","scripts":{"test":"node check.mjs"},"devDependencies":{"jsdom":"26.1.0"}}

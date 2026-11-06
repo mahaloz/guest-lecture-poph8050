@@ -1,0 +1,188 @@
+{
+  "unvaccinated_donors": 34,
+  "vaccinated_donors": 25,
+  "difference_days": 9,
+  "meaning": "First deposited day at >=50% positive; no interpolation, no new significance test.",
+  "groups": [
+    {
+      "panel": "A",
+      "strain": "675A",
+      "donor_vaccinated": false,
+      "n": 20,
+      "source_file": "DataFor2A_v2.csv",
+      "last_day": 10,
+      "final_ones": 0,
+      "final_percent": 0.0
+    },
+    {
+      "panel": "A",
+      "strain": "675A",
+      "donor_vaccinated": true,
+      "n": 9,
+      "source_file": "DataFor2A_v2.csv",
+      "last_day": 55,
+      "final_ones": 7,
+      "final_percent": 77.77777777777779
+    },
+    {
+      "panel": "A",
+      "strain": "Md5",
+      "donor_vaccinated": false,
+      "n": 8,
+      "source_file": "DataFor2A_v2.csv",
+      "last_day": 9,
+      "final_ones": 0,
+      "final_percent": 0.0
+    },
+    {
+      "panel": "A",
+      "strain": "Md5",
+      "donor_vaccinated": true,
+      "n": 7,
+      "source_file": "DataFor2A_v2.csv",
+      "last_day": 53,
+      "final_ones": 7,
+      "final_percent": 100.0
+    },
+    {
+      "panel": "A",
+      "strain": "595",
+      "donor_vaccinated": false,
+      "n": 10,
+      "source_file": "DataFor2A_v2.csv",
+      "last_day": 15,
+      "final_ones": 0,
+      "final_percent": 0.0
+    },
+    {
+      "panel": "A",
+      "strain": "595",
+      "donor_vaccinated": true,
+      "n": 7,
+      "source_file": "DataFor2A_v2.csv",
+      "last_day": 53,
+      "final_ones": 7,
+      "final_percent": 100.0
+    },
+    {
+      "panel": "B",
+      "strain": "675A",
+      "donor_vaccinated": false,
+      "n": 9,
+      "source_file": "DataFor2C.csv",
+      "last_day": 55,
+      "final_ones": 0,
+      "final_percent": 0.0
+    },
+    {
+      "panel": "B",
+      "strain": "675A",
+      "donor_vaccinated": true,
+      "n": 6,
+      "source_file": "DataFor2C.csv",
+      "last_day": 31,
+      "final_ones": 6,
+      "final_percent": 100.0
+    },
+    {
+      "panel": "B",
+      "strain": "Md5",
+      "donor_vaccinated": false,
+      "n": 8,
+      "source_file": "DataFor2C.csv",
+      "last_day": 53,
+      "final_ones": 0,
+      "final_percent": 0.0
+    },
+    {
+      "panel": "B",
+      "strain": "Md5",
+      "donor_vaccinated": true,
+      "n": 7,
+      "source_file": "DataFor2C.csv",
+      "last_day": 41,
+      "final_ones": 7,
+      "final_percent": 100.0
+    },
+    {
+      "panel": "B",
+      "strain": "595",
+      "donor_vaccinated": false,
+      "n": 10,
+      "source_file": "DataFor2C.csv",
+      "last_day": 45,
+      "final_ones": 10,
+      "final_percent": 100.0
+    },
+    {
+      "panel": "B",
+      "strain": "595",
+      "donor_vaccinated": true,
+      "n": 7,
+      "source_file": "DataFor2C.csv",
+      "last_day": 34,
+      "final_ones": 7,
+      "final_percent": 100.0
+    },
+    {
+      "panel": "C",
+      "strain": "675A",
+      "donor_vaccinated": false,
+      "n": 5,
+      "source_file": "DataFor2D_v2.csv",
+      "last_day": 55,
+      "final_ones": 5,
+      "final_percent": 100.0
+    },
+    {
+      "panel": "C",
+      "strain": "675A",
+      "donor_vaccinated": true,
+      "n": 7,
+      "source_file": "DataFor2D_v2.csv",
+      "last_day": 47,
+      "final_ones": 0,
+      "final_percent": 0.0
+    },
+    {
+      "panel": "C",
+      "strain": "Md5",
+      "donor_vaccinated": false,
+      "n": 8,
+      "source_file": "DataFor2D_v2.csv",
+      "last_day": 53,
+      "final_ones": 8,
+      "final_percent": 100.0
+    },
+    {
+      "panel": "C",
+      "strain": "Md5",
+      "donor_vaccinated": true,
+      "n": 7,
+      "source_file": "DataFor2D_v2.csv",
+      "last_day": 52,
+      "final_ones": 0,
+      "final_percent": 0.0
+    },
+    {
+      "panel": "C",
+      "strain": "595",
+      "donor_vaccinated": false,
+      "n": 10,
+      "source_file": "DataFor2D_v2.csv",
+      "last_day": 52,
+      "final_ones": 0,
+      "final_percent": 0.0
+    },
+    {
+      "panel": "C",
+      "strain": "595",
+      "donor_vaccinated": true,
+      "n": 7,
+      "source_file": "DataFor2D_v2.csv",
+      "last_day": 53,
+      "final_ones": 1,
+      "final_percent": 14.285714285714285
+    }
+  ]
+}

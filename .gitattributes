@@ -1,0 +1,6 @@
+# Preserve deposited source files byte-for-byte.
+reproduction/data/experiment2/** -text -whitespace
+research-walkthrough/dist/assets/*.csv -text -whitespace
+research-walkthrough/dist/assets/*.R -text -whitespace
+# Generated SVGs retain the plotting library's formatting.
+reproduction/outputs/*.svg -whitespace
