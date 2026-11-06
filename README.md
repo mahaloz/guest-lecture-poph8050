@@ -1,5 +1,7 @@
 # Scientific Research in the Age of AI Agents
 
+Get the [slides here!](https://docs.google.com/presentation/d/1CjmDeR3eX8qM--d1vayP2hyykuaqjQPHKePj2W4_XoU/edit?usp=sharing)
+
 Three hands-on demos for **POPH 8050: Avian Virus Diseases**. They show how an AI coding assistant can help you inspect published evidence, build an interactive data explorer, and carry out a public-data investigation. You do not need to understand the code to explore the demos or ask Codex to run them.
 
 All three demos are already built. **Opening a demo shows saved work; it does not ask AI to conduct a new investigation.** Recalculating the analyses is a separate option below.
