@@ -28,12 +28,52 @@ window.addEventListener('hashchange',route);
 const colors={'595':'#228b22',Md5:'#3030ff','675A':'#ff1010'};
 const titles={A:'Survival of experimentally infected donors',B:'MDV positivity in unvaccinated contacts',C:'Survival of unvaccinated contacts'};
 let panel='A',timer=null;
-function stop(){if(timer!==null)clearInterval(timer);timer=null;$('#play').textContent='▶';$('#play').setAttribute('aria-label','Play through recorded figure');}
+function stop(){if(timer!==null)clearInterval(timer);timer=null;$('#play').textContent='▶';$('#play').setAttribute('aria-label','Play through recorded figure');$('#sim-play').textContent='▶';$('#sim-play').setAttribute('aria-label','Play virtual cohort');}
 function selected(){const strains=$$('#strains input:checked').map(i=>i.value);const donor=$('#donors').value;return R.curves.filter(c=>c.panel===panel&&strains.includes(c.strain)&&(donor==='both'||c.donor_vaccinated===(donor==='yes')));}
 function rawAt(c,t){if(t<c.day[0]||t>c.day[c.day.length-1])return null;const i=Math.floor(t)-1;return {value:c.percent[i],ones:c.records.reduce((sum,r)=>sum+r.state[i],0),n:c.n};}
 function valueAt(c,t){if(t<c.day[0]||t>c.day[c.day.length-1])return null;if($('#plot-mode').value==='states')return rawAt(c,t).value;for(let i=1;i<c.day.length;i++){if(t<=c.day[i]){const f=(t-c.day[i-1])/(c.day[i]-c.day[i-1]);return c.drawn_percent[i-1]+f*(c.drawn_percent[i]-c.drawn_percent[i-1]);}}return c.drawn_percent[c.drawn_percent.length-1];}
 function inspectRecords(){const c=R.curves.find(c=>c.r_object===($('#record-group').value.split('|')[1])&&c.panel===$('#record-group').value.split('|')[0]);const tbody=$('#record-rows');tbody.replaceChildren();if(!c){$('#record-source').textContent='Select a strain to inspect a record block.';return;}$('#record-source').textContent=`${c.source_file} · skip ${c.skip}, nrows ${c.n} · ${c.n} included records · days ${c.day[0]}–${c.day.at(-1)}. One means ${c.panel==='B'?'positive':'alive'}.`;for(const r of c.records){const i=r.state.findIndex(v=>v!==r.state[0]);const tr=document.createElement('tr');for(const v of [r.record_index,r.deposited_id,i<0?'None in supplied interval':'Day '+c.day[i],r.state.at(-1)]){const td=document.createElement('td');td.textContent=v;tr.append(td);}tbody.append(tr);}}
 function fillRecordGroups(curves){const select=$('#record-group'),old=select.value;select.replaceChildren();for(const c of curves){const o=document.createElement('option');o.value=c.panel+'|'+c.r_object;o.textContent=`${c.panel} · ${c.strain} · ${c.donor_vaccinated?'vaccinated':'unvaccinated'} donors (n=${c.n})`;select.append(o);}if([...select.options].some(o=>o.value===old))select.value=old;inspectRecords();}
+// Source checked 2026-11-06: Read et al. (2015), Onward Transmission,
+// Fig 2B, strain 595. Methods: Mantel–Cox tests of Kaplan–Meier curves.
+// These are curated published results, not p-values calculated from daily states.
+const reportedComparisons = {
+ B: {'595': {label:'p < 0.05 · reported',detail:'595 contacts became positive earlier with vaccinated donors; median shift: 9 days. Whole follow-up; test not rerun.',source:'https://journals.plos.org/plosbiology/article?id=10.1371/journal.pbio.1002198#sec004'}}
+};
+function drawStatistics(curves,day){
+ $('#statistical-day').textContent=`Day ${Math.floor(day)} · ${panel==='B'?'MDV positivity':'survival'} · differences in percentage points (pp)`;
+ const tbody=$('#statistical-rows');tbody.replaceChildren();
+ for(const strain of Object.keys(colors)){
+  const groups=curves.filter(c=>c.strain===strain);if(!groups.length)continue;
+  const tr=document.createElement('tr');
+  const th=document.createElement('th');th.scope='row';th.textContent=strain;th.style.color=colors[strain];tr.append(th);
+  const delta=document.createElement('td'),evidence=document.createElement('td');
+  const vaccinated=groups.find(c=>c.donor_vaccinated),unvaccinated=groups.find(c=>!c.donor_vaccinated);
+  const a=vaccinated?rawAt(vaccinated,day):null,b=unvaccinated?rawAt(unvaccinated,day):null;
+  if(!vaccinated||!unvaccinated){
+   delta.textContent='Select both donor groups';
+  }else if(a===null||b===null){
+   delta.textContent='Outside shared follow-up';
+  }else{
+   const difference=a.value-b.value;
+   delta.textContent=`${difference>0?'+':''}${difference.toFixed(1)} pp`;
+  }
+  const result=reportedComparisons[panel]?.[strain];
+  if(!vaccinated||!unvaccinated){
+   evidence.textContent='Comparison hidden';
+  }else if(result){
+   const link=document.createElement('a');link.className='stat-badge reported';link.textContent=result.label;link.href=result.source;link.target='_blank';link.rel='noreferrer';
+   const detail=document.createElement('small');detail.textContent=result.detail;
+   evidence.append(link,detail);
+  }else{
+   const badge=document.createElement('span');badge.className='stat-badge';badge.textContent='p-value unavailable';
+   const detail=document.createElement('small');detail.textContent='Descriptive comparison; significance not established here.';
+   evidence.append(badge,detail);
+  }
+  tr.append(delta,evidence);tbody.append(tr);
+ }
+ if(!curves.length){const tr=document.createElement('tr'),td=document.createElement('td');td.colSpan=3;td.textContent='Select at least one strain to see its statistical context.';tr.append(td);tbody.append(tr);}
+}
 const NS='http://www.w3.org/2000/svg';
 function el(tag,attrs,text){const e=document.createElementNS(NS,tag);Object.entries(attrs||{}).forEach(([k,v])=>e.setAttribute(k,v));if(text!==undefined)e.textContent=text;return e;}
 function draw(){
@@ -51,14 +91,22 @@ function draw(){
  const tbody=$('#readout');tbody.replaceChildren();
  for(const strain of Object.keys(colors)){if(!curves.some(c=>c.strain===strain))continue;const tr=document.createElement('tr');const th=document.createElement('th');th.scope='row';th.textContent=strain;th.style.color=colors[strain];tr.append(th);for(const v of [true,false]){const c=curves.find(c=>c.strain===strain&&c.donor_vaccinated===v),val=c?rawAt(c,day):null;const td=document.createElement('td');td.textContent=val===null?'—':val.value.toFixed(1)+'% ('+val.ones+'/'+val.n+')';tr.append(td);}tbody.append(tr);}
  if(!curves.length){const tr=document.createElement('tr');const td=document.createElement('td');td.colSpan=3;td.textContent='No strains selected';tr.append(td);tbody.append(tr);}
+ drawStatistics(curves,day);
+ drawSimulation(day);
  fillRecordGroups(curves);
 }
 function setPanel(p){panel=p;$$('#panel-tabs button').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.panel===p)));draw();}
 $$('#panel-tabs button').forEach(b=>b.addEventListener('click',()=>setPanel(b.dataset.panel)));
 $$('#strains input').forEach(b=>b.addEventListener('change',draw));$('#donors').addEventListener('change',draw);$('#plot-mode').addEventListener('change',draw);$('#record-group').addEventListener('change',inspectRecords);$('#day').addEventListener('input',()=>{stop();draw();});
 $('#play').addEventListener('click',()=>{if(timer!==null){stop();return;}if(Number($('#day').value)>=56)$('#day').value='0';$('#play').textContent='Ⅱ';$('#play').setAttribute('aria-label','Pause figure playback');timer=setInterval(()=>{const d=Math.min(56,Number($('#day').value)+.2);$('#day').value=String(d);draw();if(d>=56)stop();},70);draw();});
-$('#reset').addEventListener('click',()=>{stop();$$('#strains input').forEach(i=>i.checked=true);$('#donors').value='both';$('#plot-mode').value='states';$('#day').value='56';setPanel('A');});
-$('#highlight').addEventListener('click',()=>{stop();$$('#strains input').forEach(i=>i.checked=i.value==='595');$('#donors').value='both';$('#plot-mode').value='states';$('#day').value='34';setPanel('B');});
+$('#reset').addEventListener('click',()=>{stop();cohortSeed=1;$('#sim-strain').value='595';$('#sim-size').value='200';$('#sim-mode').value='scaled';$$('#strains input').forEach(i=>i.checked=true);$('#donors').value='both';$('#plot-mode').value='states';$('#day').value='56';setPanel('A');});
+$('#highlight').addEventListener('click',()=>{stop();$('#sim-strain').value='595';$$('#strains input').forEach(i=>i.checked=i.value==='595');$('#donors').value='both';$('#plot-mode').value='states';$('#day').value='34';setPanel('B');});
+for(const id of ['sim-strain','sim-size','sim-mode'])$('#'+id).addEventListener('change',()=>drawSimulation(Number($('#day').value)));
+$('#sim-resample').addEventListener('click',()=>{cohortSeed++;drawSimulation(Number($('#day').value));});
+$('#sim-panel').addEventListener('change',()=>setPanel($('#sim-panel').value));
+$('#sim-day').addEventListener('input',()=>{$('#day').value=$('#sim-day').value;stop();draw();});
+$('#sim-play').addEventListener('click',()=>$('#play').click());
+$('#sim-restart').addEventListener('click',()=>{stop();$('#day').value='1';$('#play').click();});
 $('#reveal').addEventListener('click',()=>{const visible=$('#answer').hidden;$('#answer').hidden=!visible;$('#reveal').setAttribute('aria-expanded',String(visible));$('#reveal').textContent=visible?'Hide explanation ↑':'Reveal the distinction ↓';});
 const limits=[
  ['The original figure calculation is reproduced, not every statistical analysis.','The original ZIP and R/CSV sources were obtained and verified. Python translates the supplied table selections and column means. It does not independently re-estimate original exclusions, censoring, risk sets, confidence intervals, or p-values. The R interpreter was unavailable; R code was inspected and translated, not executed.'],

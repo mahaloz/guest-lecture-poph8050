@@ -21,6 +21,7 @@ The launcher works from any working directory when given its path. It serves onl
 - `dist/index.html`: page structure and research narrative.
 - `dist/style.css`: layout, colors, and responsive styles.
 - `dist/app.js`: navigation, interactive charts, filters, playback, and notebook views.
+- `dist/simulation.js`: scaled and resampled virtual-cohort dot display.
 - `dist/data.js`: data-derived curves, included binary records, report, code, and recovery record.
 - `dist/assets/`: original/reproduced figures and downloadable research files.
 - `prepare_assets.py`: refresh the bundle from the sibling `../reproduction` directory.
@@ -59,3 +60,22 @@ python3 research-walkthrough/prepare_assets.py
 ```
 
 The original archive is at `../reproduction/data/Fig2_and_S2.zip`. Python plotting dependencies are listed in `../reproduction/requirements.txt`; they are not needed just to serve the already bundled app.
+
+## Statistical annotations
+
+The figure explorer shows the vaccinated-minus-unvaccinated daily difference in percentage points beside the slider. This uses unshifted deposited fractions and requires both groups to have observations at the selected day; it never extrapolates. Filters and playback update the annotations in both presentation modes.
+
+A separate badge identifies **published whole-curve evidence**, currently the Figure 2B strain-595 comparison reported as **p < 0.05**, with a nine-day earlier median positivity time. Source: Read et al., [Onward Transmission and Statistical Analyses](https://journals.plos.org/plosbiology/article?id=10.1371/journal.pbio.1002198#sec004), checked November 6, 2026. The paper specifies Mantel–Cox comparisons of Kaplan–Meier curves. The badge stays constant across days: it is not a pointwise test, an exact p-value, or an independently reproduced significance analysis. The curated mapping is in `dist/app.js` (`reportedComparisons`).
+
+Other panel/strain combinations explicitly say “p-value unavailable”; this must not be interpreted as nonsignificance. No additional hypothesis tests or confidence intervals are inferred from the prepared plotting tables. The expandable explanation covers the statistical scope and shared-isolator clustering. Statistical significance alone does not establish that a claim is true or generalizable.
+
+## Virtual cohort simulation
+
+Below the figure, the live dot display defaults to **N = 200 total virtual birds**, split evenly between vaccinated-donor and unvaccinated-donor groups. Total N can be changed from 20 to 1,000. The simulation has its own strain selector and always compares both groups, independently of the chart’s visibility filters. It shares the chart’s outcome and day; its local scrubber, play/pause, and replay controls also update the chart.
+
+- **Scale observed proportions:** round `(N/2) × original ones / original n` to whole virtual birds. A stable shuffled rank preserves monotone state changes as time advances.
+- **Resample bird histories:** sample N/2 complete deposited records with replacement within each strain/endpoint/donor group. A deterministic pseudorandom draw is held fixed across days; “Draw another cohort” changes it. This assumes independent draws from the empirical distribution of included histories. Dot locations have no spatial or contact meaning.
+
+Source counts and follow-up horizons stay visible; states outside a group’s source horizon become unknown, without extrapolation. Display offsets never enter the simulation. Positivity and survival are simulated separately because their original denominators and identifiers do not permit reliable individual linkage.
+
+This is a conditional teaching simulation, not an expanded dataset, a prediction of a 200-bird experiment, a transmission-network model, or a power analysis. It cannot estimate between-isolator variation or unobserved outcomes. Resampling a zero-event block always yields zero events, which does not establish zero risk. No new p-values or confidence intervals are computed. Implementation: `dist/simulation.js`.
